@@ -235,3 +235,33 @@ nav div:hover {
     font-weight: 500;
     display: none;
 }
+
+.site-footer {
+    background-color: rgba(58, 123, 213, 0.3);
+    color: #222;
+    text-align: center;
+    padding: 2em 1em;
+    margin-top: 4em;
+    border-top: 2px solid rgb(58, 123, 213);
+}
+
+.footer-links {
+    margin-bottom: 1em;
+}
+
+.footer-links a {
+    color: #222;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #222;
+}
+
+.footer-copy {
+    font-size: 0.9em;
+    color: rgb(58, 123, 213);
+}
