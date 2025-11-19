@@ -1,0 +1,196 @@
+/* Global */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.3), rgba(0, 210, 255, 0.6));
+    color: #222;
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+
+/* Main Layout */
+main {
+    width: 95vw;
+    max-width: 70vw;
+    margin: 4rem auto;
+}
+
+section {
+    padding: 1em 0;
+}
+
+h2 {
+    padding-bottom: 0.5em;
+}
+
+/* Skill Cards */
+.skill-item {
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.skill-item > div {
+    padding: 1em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.2em;
+}
+
+.skill-item img {
+    height: auto;
+    max-height: 50px;
+}
+
+#java-logo img {
+    height: auto;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 4rem;
+    padding: 1rem 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: fixed;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    top: 0;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav div {
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    color: #222;
+}
+/* Nav anchors */
+nav > a {
+    color: #222;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+nav div:hover {
+    background-color:rgba(58, 123, 213, 0.3);
+}
+
+.language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    width: 100%;
+    gap: 1em;
+}
+
+.lang-label p {
+    font-weight: 600;
+    margin: 0;
+}
+
+.lang-level p {
+    margin: 0;
+    opacity: 0.7;
+}
+
+#languages {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2rem;
+}
+
+.cv-img {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    align-self: center;
+}
+
+/* Base style for the CV download button */
+.btn-cv {
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-cv:hover {
+    background: rgba(255,255,255,0.28);
+    transform: translateY(-2px);
+}
+
+#cv-container {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center horizontally */
+    justify-content: center; /* center vertically if needed */
+    gap: 1.5em;              /* space between image and button */
+    margin: 2em auto;        /* extra vertical spacing */
+    text-align: center;      /* ensures text inside button is centered */
+}
+
+#scrollTopBtn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.arrow-up {
+    font-size: 1.5rem;
+    line-height: 1;
+}
