@@ -11,3 +11,10 @@ window.addEventListener("scroll", () => {
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const sendBtn = document.getElementById('send-btn');
+const confirmation = document.getElementById('confirmation-msg');
+sendBtn.addEventListener('click', () => {
+    confirmation.style.display = 'block';
+    setTimeout(() => { confirmation.style.display = 'none'; }, 3000);
+});
